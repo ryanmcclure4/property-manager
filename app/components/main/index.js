@@ -1,0 +1,1 @@
+export PropertyView from './PropertyView';
