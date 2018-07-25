@@ -5,17 +5,22 @@ import {
 import Navigation from './Navigation';
 import { css } from 'aphrodite';
 import style from './style';
+import { ThemeContext, theme } from '../general';
+
 
 class Base extends Component {
   render() {
-    const { properties, loading } = this.props;
+    const { business: { loading, properties, activeProperty }, setActiveProperty } = this.props;
+    console.log('ACTIVe', activeProperty);
     return (
-      <div className={css(style.base)}>
-        <Navigation />
-        {loading ? 'LOADING...' :
-        <PropertyView properties={properties} />
-      }
-      </div>
+      <ThemeContext.Provider value={theme}>
+        <div className={css(style.base)}>
+          <Navigation properties={properties} setActiveProperty={setActiveProperty} />
+          {loading ? 'LOADING...' :
+          <PropertyView property={properties.find(property => property._id === activeProperty)} />
+        }
+        </div>
+      </ThemeContext.Provider>
     );
   }
 }

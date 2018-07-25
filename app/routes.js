@@ -7,7 +7,8 @@ import MainView from './containers/MainView';
 export default () => (
   <App>
     <Switch>
-      <Route path="/" component={MainView} />
+      <Route path="/" component={MainView}>
+      </Route>
     </Switch>
   </App>
 );

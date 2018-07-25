@@ -7,6 +7,7 @@ import webpack from 'webpack';
 import fs from 'fs';
 import { dependencies as externals } from './app/package.json';
 import { dependencies as possibleExternals } from './package.json';
+const npm_package = require('./package.json')
 
 // Find all the dependencies without a `main` property and add them as webpack externals
 function filterDepWithoutEntryPoints(dep: string): boolean {
@@ -61,6 +62,9 @@ export default {
    */
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      'general': path.join(__dirname, 'app/components/general'),
+    },
     modules: [path.join(__dirname, 'app'), 'node_modules']
   },
 

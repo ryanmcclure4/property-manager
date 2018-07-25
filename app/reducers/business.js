@@ -3,6 +3,7 @@ import {
   BUSINESS_INITIAL_LOAD,
   BUSINESS_INITIAL_LOAD_SUCCESS,
   BUSINESS_INITIAL_LOAD_FAILURE,
+  SET_ACTIVE_PROPERTY,
 } from '../actions/business';
 
 type actionType = {
@@ -35,7 +36,11 @@ function initialLoad(state: { properties: [] } = { properties: [] }, action: act
   }
 }
 
-export default function business(state: { properties: [] } | undefined = { properties: [] }, action: actionType) {
+export default function business(state: {
+  business: {
+    properties: [],
+  }
+} | undefined = { properties: [], activeProperty: null }, action: actionType) {
   switch (action.type) {
     case BUSINESS_INITIAL_LOAD:
     case BUSINESS_INITIAL_LOAD_FAILURE:
@@ -43,6 +48,11 @@ export default function business(state: { properties: [] } | undefined = { prope
       return {
         ...state,
         ...initialLoad(state.business, action),
+      };
+    case SET_ACTIVE_PROPERTY:
+      return {
+        ...state,
+        activeProperty: action.id,
       };
     default:
       return state;

@@ -6,14 +6,9 @@ import style from './style';
 
 class PropertyView extends Component {
   render() {
-    console.log('PROPERTIES', this.props.properties);
+    console.log('PROEPRTYY', this.props.property);
     return (
-      <View title="Property" styles={style.base}>
-        <ul>
-         {this.props.properties.map(property => (
-            <li>{property.name}</li>
-         ))} 
-        </ul>
+      <View title={this.props.property && this.props.property.name} styles={style.base}>
       </View>
     );
   }

@@ -1,22 +1,68 @@
 import React, { Component } from 'react';
 import { css } from 'aphrodite';
-import style from './style';
-import Category from './Category';
+import styles from './style';
+import CategoryButton from './CategoryButton';
+import PropertiesCategory from './PropertiesCategory';
+
+type $Category = 'properties' | 'reminders' | 'reports';
 
 type $Props = {
+
 };
 
-class Navigation extends Component {
-  props: $Props;
+type $State = {
+  category: $Category,
+};
+
+const categories = [
+  {
+    label: 'Properties',
+    value: 'properties',
+    icon: 'ios-home',
+  },
+  {
+    label: 'Reminders',
+    value: 'reminders',
+    icon: 'ios-timer',
+  },
+  {
+    label: 'Reports',
+    value: 'reports',
+    icon: 'ios-stats',
+  },
+];
+
+class Navigation extends Component<$Props, $State> {
+  state = {
+    category: 'properties',
+  }
+
+  handleSetCategory = (category: $Category): void => {
+    this.setState({
+      category,
+    });
+  }
 
   render() {
+    const { category } = this.state;
+    const selectedCategory = categories.find($category => $category.value === category);
+
     return (
-      <div className={css(style.base)}>
-        <div className={css(style.categories)}>
-          <Category icon="ios-home" label="Properties" />
-          <Category icon="ios-timer" label="Reminders" />
-          <Category icon="ios-stats" label="Reports" />
+      <div className={css(styles.base)}>
+        <div className={css(styles.categories)}>
+          {categories.map(({ label, value, icon }) => (
+            <CategoryButton
+              icon={icon}
+              label={label}
+              isActive={category === value}
+              onClick={() => this.handleSetCategory(value)}
+            />
+          ))}
         </div>
+        <div className={css(styles.categoryHeader)}>
+          {selectedCategory.label.toUpperCase()}
+        </div>
+        <PropertiesCategory properties={this.props.properties} setActiveProperty={this.props.setActiveProperty} />
       </div>
     );
   }

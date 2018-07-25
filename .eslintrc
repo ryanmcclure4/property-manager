@@ -47,7 +47,10 @@
     "import/resolver": {
       "webpack": {
         "config": "webpack.config.eslint.js"
-      }
+      },
+      "alias": [
+        ['general', './app/components/general']
+      ]
     }
   }
 }

@@ -1,16 +1,16 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Base from '../components/Base';
+import * as BusinessActions from '../actions/business';
 
 function mapStateToProps(state) {
   return {
-    properties: state.business.properties,
-    loading: state.business.loading,
+    business: state.business,
   };
 }
 
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators(CounterActions, dispatch);
-// }
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(BusinessActions, dispatch);
+}
 
-export default connect(mapStateToProps)(Base);
+export default connect(mapStateToProps, mapDispatchToProps)(Base);

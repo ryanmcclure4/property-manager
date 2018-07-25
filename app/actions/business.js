@@ -8,6 +8,14 @@ type actionType = {
 export const BUSINESS_INITIAL_LOAD = 'BUSINESS_INITIAL_LOAD';
 export const BUSINESS_INITIAL_LOAD_SUCCESS = 'BUSINESS_INITIAL_LOAD_SUCCESS';
 export const BUSINESS_INITIAL_LOAD_FAILURE = 'BUSINESS_INITIAL_LOAD_FAILURE';
+export const SET_ACTIVE_PROPERTY = 'SET_ACTIVE_PROPERTY';
+
+export function setActiveProperty(propertyId: string) {
+  return {
+    type: SET_ACTIVE_PROPERTY,
+    id: propertyId,
+  };
+}
 
 export function businessInitialLoad() {
   return {

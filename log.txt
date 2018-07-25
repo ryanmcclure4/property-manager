@@ -128,3 +128,14 @@
 [Sun, 22 Jul 2018 15:44:34 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/couchdb-logo.png 200
 [Sun, 22 Jul 2018 15:44:34 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/github.png 200
 [Sun, 22 Jul 2018 16:04:35 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Sun, 22 Jul 2018 18:26:11 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Sun, 22 Jul 2018 18:35:46 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Sun, 22 Jul 2018 18:42:12 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Sun, 22 Jul 2018 20:03:36 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Sun, 22 Jul 2018 20:13:34 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Sun, 22 Jul 2018 20:22:17 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Sun, 22 Jul 2018 20:50:20 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Sun, 22 Jul 2018 21:03:01 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Sun, 22 Jul 2018 21:34:16 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Mon, 23 Jul 2018 03:02:38 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
+[Mon, 23 Jul 2018 12:28:57 GMT] [info] [<0.000.0>] 127.0.0.1 - - GET /_utils/dashboard.assets/img/pouchdb-favicon.png 304
