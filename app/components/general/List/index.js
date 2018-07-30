@@ -1,23 +1,17 @@
 // @flow
 import React from 'react';
-import { css } from 'aphrodite';
-import styles from './styles';
-import { ThemeContext } from 'general';
+import { Base } from './styles';
 
 type $Props = {
   items: any[],
-  baseStyle?: Object,
+  style?: Object,
   itemRenderer?: any => React.Element<*>,
 };
 
-const List = ({ items, itemRenderer, baseStyle }: $Props) => (
-  <ThemeContext.Consumer>
-    {(theme) => (
-      <div className={css([styles(theme).base, baseStyle])}>
-        {items.map(item => itemRenderer(item))}
-      </div>
-    )}
-  </ThemeContext.Consumer>
+const List = ({ items, itemRenderer, style }: $Props) => (
+  <Base style={style}>
+    {items.map(item => itemRenderer(item))}
+  </Base>
 );
 
 List.defaultProps = {

@@ -64,6 +64,8 @@ export default {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
       'general': path.join(__dirname, 'app/components/general'),
+      'actions': path.join(__dirname, 'app/actions'),
+      'components': path.join(__dirname, 'app/components'),
     },
     modules: [path.join(__dirname, 'app'), 'node_modules']
   },

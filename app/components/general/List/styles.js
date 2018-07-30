@@ -1,10 +1,6 @@
-import { StyleSheet } from 'aphrodite';
+import styled from 'styled-components';
 
-const styles = theme => StyleSheet.create({
-  base: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-});
-
-export default styles;
+export const Base = styled.div`
+  display: flex;
+  flex-direction: column;
+`;

@@ -5,7 +5,7 @@ import model from '../model';
 
 export type $Payment = {
   _id: string,
-  type: 'rent' | 'deposit' | 'other',
+  type: 'rent' | 'deposit' | 'hoa' | 'utilities' | 'other',
   amount: number,
   dueDate: number,
   recurring: boolean,

@@ -10,7 +10,7 @@ body {
   position: relative;
   color: #305F72;
   height: 100vh;
-  font-family: 'Alegreya Sans';
+  font-family: 'Montserrat';
   margin: 0px;
   background-color: #fff;
 }
@@ -29,6 +29,10 @@ p {
 
 li {
   list-style: none;
+}
+
+input {
+  padding: 0px !important;
 }
 
 button {

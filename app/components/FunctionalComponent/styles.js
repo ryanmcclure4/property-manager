@@ -1,9 +1,5 @@
-import { StyleSheet } from 'aphrodite';
+import styled from 'styled-components';
 
-const styles = theme => StyleSheet.create({
-  base: {
+export const Base = styled.div`
 
-  },
-});
-
-export default styles;
+`;

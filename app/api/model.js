@@ -28,9 +28,8 @@ const model = (name: string): $Model => ({
   /**
    * Update
    */
-  async update(rev: string, data: Object): Promise<void> {
+  async update(data: Object): Promise<void> {
     return db.put({
-      _rev: rev,
       ...data,
     });
   },

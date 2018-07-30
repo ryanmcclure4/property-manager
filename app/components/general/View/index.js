@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
-import { css } from 'aphrodite';
-import style from './style';
+import { Base } from './style';
 import Header from '../Header';
 
 type $Props = {
-  title: string,
-  styles: Object[] | Object,
+  title?: string,
+  subtitle?: string,
+  style: Object[] | Object,
   children: React.Element<*>,
 };
 
-class View extends Component<$Props> {
-  render() {
-    const { title, children, styles } = this.props;
-    return (
-      <div className={css(style.base, styles)}>
-        <Header title={title} />
-        {children}
-      </div>
-    );
-  }
-}
+const View = ({ title, subtitle, children, style }: $Props) => (
+  <Base style={style}>
+    <Header title={title} subtitle={subtitle} />
+    {children}
+  </Base>
+);
 
 export default View;

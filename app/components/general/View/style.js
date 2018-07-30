@@ -1,11 +1,7 @@
-import { StyleSheet } from 'aphrodite';
+import styled from 'styled-components';
 
-const styles = StyleSheet.create({
-  base: {
-    display: 'flex',
-    height: '100%',
-    width: '100%',
-  },
-});
-
-export default styles;
+export const Base = styled.div`
+  display: flex;
+  height: 100%;
+  width: 100%;
+`;

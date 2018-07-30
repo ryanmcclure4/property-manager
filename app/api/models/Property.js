@@ -6,6 +6,7 @@ export type $Property = {
   _id: string,
   name: string,
   businessId: string,
+  address: string,
   tenants: {
     _id: string,
     contactId: string,

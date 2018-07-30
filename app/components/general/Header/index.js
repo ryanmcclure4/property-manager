@@ -1,23 +1,19 @@
-import React, { Component } from 'react';
-import { css } from 'aphrodite';
-import style from './style';
+// @flow
+import React from 'react';
+import { Base, Subtitle } from './style';
 
 type $Props = {
   title: string,
+  subtitle: string,
 };
 
-class Header extends Component {
-  props: $Props;
-
-  render() {
-    const { title } = this.props;
-
-    return (
-      <div className={css(style.base)}>
-        {title}
-      </div>
-    );
-  }
-}
+const Header = ({ title, subtitle}: $Props) => (
+  <Base>
+    {title}
+    <Subtitle>
+      {subtitle}
+    </Subtitle>
+  </Base>
+);
 
 export default Header;

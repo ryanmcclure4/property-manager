@@ -1,21 +1,15 @@
 // @flow
 import React from 'react';
-import { css } from 'aphrodite';
-import styles from './styles';
-import { ThemeContext } from 'general';
+import { Base } from './styles';
 
 type $Props = {
 
 };
 
 const _ = ({ }: $Props) => (
-  <ThemeContext.Consumer>
-    {(theme) => (
-      <div className={css(styles.base)}>
-        
-      </div>
-    )}
-  </ThemeContext.Consumer>
+  <Base>
+    
+  </Base>
 );
 
 export default _;
